@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+@charset "utf-8";
+
+/* custom_reset.css加入 */
+:root {
+    --spacer: ; /* 間距*倍率 */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"SegoeUI","MicrosoftJhengHei",Roboto,"HelveticaNeue",'Helvetica',Arial,sans-serif;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+.clearfix { zoom: 1; }
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+ol, ul, li { 
+    list-style: none;
+}
+i { font-style: normal; }
+img { border: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
