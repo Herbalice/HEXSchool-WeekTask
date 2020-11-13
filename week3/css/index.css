@@ -1,0 +1,53 @@
+@charset "utf-8";
+.banner {
+    background-image: url('../img/banner-sm.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 394px;
+}
+.slogan {
+    height: 100%;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+.slogan_text { 
+    font-size: 16px;
+    line-height: 22px;
+}
+.slogan_title {
+    font-size: 32px;
+    line-height: 45px;
+}
+
+@media (max-width: 575px) {
+    
+}
+@media (min-width: 576px) {
+    
+}
+@media (min-width: 768px) {
+    .banner { height: 840px; }
+    .slogan_text { 
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .slogan_title {
+        font-size: 48px;
+        line-height: 67px;
+    }
+}
+@media (min-width: 992px) {
+    .banner {
+        background-image: url('../img/banner.png');
+    }
+    .slogan_text { 
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .slogan_title {
+        font-size: 64px;
+        line-height: 90px;
+    }
+}
