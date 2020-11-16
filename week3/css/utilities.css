@@ -169,7 +169,6 @@ a { color: #650300; text-decoration: none; }
 .ellipsis, .text-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-block; }
 .logo-text-truncate{
     overflow: hidden;
-    position: absolute;
     text-indent: 101%;
     white-space: nowrap;
 }
