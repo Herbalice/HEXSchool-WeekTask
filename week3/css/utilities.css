@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 @charset "utf-8";
 
 /* custom_reset.css加入 */
@@ -13,7 +13,7 @@
 }
 body {
     /* font-family: "Noto Sans TC",-apple-system,BlinkMacSystemFont,"SegoeUI","MicrosoftJhengHei",Roboto,"HelveticaNeue",'Helvetica',Arial,sans-serif; */
-    font-family: "Noto Sans","HelveticaNeue",'Helvetica',Arial,sans-serif;
+    font-family: 'Roboto',"Noto Sans","HelveticaNeue",'Helvetica',Arial,sans-serif;
     line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -41,8 +41,8 @@ a { color: #650300; text-decoration: none; }
     transition: all 0.3s;
 }
 /* font-sytle */
-.text-primary { color: #650300; }  /* 主色 */
-.text-secondary { color: #AA0601; } /* 次要色 */
+.text-primary { color: #AA0601; }  /* 主色 */
+.text-secondary { color: #650300; } /* 次要色 */
 .text-light { color: #f8f9fa; }
 .text-dark { color: #343a40; }
 .text-white { color: #fff; }
@@ -98,7 +98,7 @@ a { color: #650300; text-decoration: none; }
 /* 背景色 */
 .bg-primary { background: #AA0601; }  /* 主色 */
 .bg-secondary { background: #ababab; } /* 次要色 */
-.bg-light { background: #f8f9fa; }
+.bg-light { background: #aa06010d; }
 .bg-dark { background: #343a40; }
 .bg-white { background: #fff; }
 
@@ -130,11 +130,16 @@ a { color: #650300; text-decoration: none; }
 .mb-3 { margin-bottom: calc(var(--spacer) * 3); }
 .mb-4 { margin-bottom: calc(var(--spacer) * 4); }
 .mb-5 { margin-bottom: calc(var(--spacer) * 5); }
+.mb-6 { margin-bottom: calc(var(--spacer) * 6); }
+.mb-10 { margin-bottom: calc(var(--spacer) * 10); }
 /* 內、外間距 */
+.p-4 { padding: calc(var(--spacer) * 4); }
 .pb-1 { padding-bottom: calc(var(--spacer) * 1); }
 .pb-2 { padding-bottom: calc(var(--spacer) * 2); }
 .pt-2 { padding-top: calc(var(--spacer) * 2); }
+.pt-4 { padding-top: calc(var(--spacer) * 4); }
 .pt-5 { padding-top: calc(var(--spacer) * 5); }
+.py-8 { padding-top: calc(var(--spacer) * 8); padding-bottom: calc(var(--spacer) * 8); }
 /* 間距-客製 */
 .ml-10px { margin-left: 10px; }
 .mb-45px { margin-bottom: 45px; }
@@ -172,7 +177,19 @@ a { color: #650300; text-decoration: none; }
     text-indent: 101%;
     white-space: nowrap;
 }
-
+.mask { position: relative; }
+.mask::before {
+    content: '';
+    background-color: rgba(255, 255, 255, .5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
 
 @media (max-width: 575px) {
     .ml-sm-6 { margin-left: calc(var(--spacer) * 5); }
@@ -182,15 +199,29 @@ a { color: #650300; text-decoration: none; }
 @media (min-width: 576px) {
     .ml-sm-5 { margin-left: calc(var(--spacer) * 5); }
     .ml-sm-6 { margin-left: calc(var(--spacer) * 6); }
+    .mb-sm-0 { margin-bottom: 0; }
     .sm-hidden { display: none; }
 }
 @media (min-width: 768px) {
     .ml-md-8 { margin-left: calc(var(--spacer) * 8); }
+    .mb-md-0 { margin-bottom: 0; }
+    .mb-md-3 { margin-bottom: calc(var(--spacer) * 3); }
+    .mb-md-5 { margin-bottom: calc(var(--spacer) * 5); }
+    .mb-md-8 { margin-bottom: calc(var(--spacer) * 8); }
+    .py-md-10 { padding-top: calc(var(--spacer) * 10); padding-bottom: calc(var(--spacer) * 10); }
 }
 @media (min-width: 992px) {
     .ml-lg-8 { margin-left: calc(var(--spacer) * 8); }
     .ml-lg-10 { margin-left: calc(var(--spacer) * 10); }
     .ml-lg-12 { margin-left: calc(var(--spacer) * 12); }
     .ml-lg-13 { margin-left: calc(var(--spacer) * 13.5); }
+    .py-lg-16 { padding-top: calc(var(--spacer) * 16); padding-bottom: calc(var(--spacer) * 16); }
+    .mb-lg-0 { margin-bottom: 0; }
+    .mb-lg-1 { margin-bottom: calc(var(--spacer) * 1); }
+    .mb-lg-4 { margin-bottom: calc(var(--spacer) * 4); }
+    .mb-lg-5 { margin-bottom: calc(var(--spacer) * 5); }
+    .mb-lg-8 { margin-bottom: calc(var(--spacer) * 8); }
+    .mb-lg-10 { margin-bottom: calc(var(--spacer) * 10); }
+    .mb-lg-15 { margin-bottom: calc(var(--spacer) * 15); }
     .sm-hidden { display: block; }
 }

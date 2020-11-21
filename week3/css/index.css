@@ -20,12 +20,117 @@
     font-size: 32px;
     line-height: 45px;
 }
-
+.h3 {
+    font-size: 24px;
+    line-height: 33px;
+}
+.advantages__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.advantages__item {
+    align-items: center;
+    flex-direction: column;
+}
+.advantages__photo {
+    height: 80px;
+    width: 80px;
+}
+.advantages__item .h4 {
+    font-size: 20px;
+    line-height: 28px;
+}
+.classic__item {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.classic__item .h4 {
+    position: absolute;
+    color:#fff;
+    font-size: 28px;
+    line-height: 37px
+}
+.icon::before {
+    content: '';
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 32px;
+    margin-right: 4px;
+    vertical-align: -6px;
+    width: 32px;
+}
+li.classic__item:nth-child(1) .icon::before { background-image: url('../img/icon-diamond-white.svg'); }
+li.classic__item:nth-child(2) .icon::before { background-image: url('../img/icon-sun-white.svg'); }
+li.classic__item:nth-child(3) .icon::before { background-image: url('../img/icon-thunder-white.svg'); }
+.coBranding {
+    background: url('../img/bg.png') no-repeat center center / cover;
+}
+.coBranding__list {
+    flex-direction: column;
+}
+.coBranding__item {
+    align-items: center;
+    justify-content: center;
+}
+.coBranding .h4 {
+    position: absolute;
+    font-size: 32px;
+    line-height: 43px;
+    z-index: 2;
+}
+.rec__list {
+    flex-direction: column;
+}
+.rec__photo {
+    width: 100%;
+}
+.rec_text-group {
+    border-color: #DEE2E6;
+    border-width: 0 1px 1px;
+    border-style: solid;
+}
+.rec__name {
+    font-size: 0.87rem;
+    font-weight: 500;
+    line-height: 1.18rem;
+}
+.rec__des {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.rec__timeUpdate {
+    color: #707070;
+    font-size: 0.87rem;
+    line-height: 1.18rem;
+}
+.foreword__text{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
 @media (max-width: 575px) {
-    
 }
 @media (min-width: 576px) {
-    
+    .advantages__list {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .advantages__item {
+        width: 40%;
+    }
+    .coBranding__list {
+        flex-direction: row;
+    }
+    .coBranding__item:nth-child(1) {
+        margin-right: 30px;
+    }
+    .form {
+        margin: 0 auto;
+        max-width: 450px;
+    }
 }
 @media (min-width: 768px) {
     .banner { height: 840px; }
@@ -36,6 +141,32 @@
     .slogan_title {
         font-size: 48px;
         line-height: 67px;
+    }
+    .h3 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    .classic__item {
+        justify-content: flex-start;
+    }
+    .classic__item .h4 {
+        color:#aa0601;
+        position: static;
+    }
+    .classic__photo {
+        max-width: 56.5%;
+        margin-right: 30px;
+    }
+    li.classic__item:nth-child(1) .icon::before { background-image: url('../img/icon-diamond.svg'); }
+    li.classic__item:nth-child(2) .icon::before { background-image: url('../img/icon-sun.svg'); }
+    li.classic__item:nth-child(3) .icon::before { background-image: url('../img/icon-thunder.svg'); }
+    .rec__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .rec__item {
+        width: calc((100% - 30px) / 2);
     }
 }
 @media (min-width: 992px) {
@@ -49,5 +180,51 @@
     .slogan_title {
         font-size: 64px;
         line-height: 90px;
+    }
+    .h3 {
+        font-size: 48px;
+        line-height: 67px;
+    }
+    .advantages__item {
+        width: 20%;
+    }
+    .advantages__photo {
+        height: 100px;
+        width: 100px;
+    }
+    .advantages__item .h4 {
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .coBranding .h4 {
+        font-size: 72px;
+        line-height: 95px
+    }
+    .rec__item {
+        width: calc((100% - 30px * 3) / 4);
+    }
+    .rec__name { margin-bottom: 7px; }
+    .rec__des { margin-bottom: 10px; }
+    .foreword__text{
+        font-size: 1.25rem;
+        line-height: 1.88rem;
+    }
+    .form {
+        max-width: 730px;
+    }
+}
+@media (min-width: 1100px) {
+    .classic__item:nth-child(2) .classic__photo {
+        margin-left: 30px;
+        margin-right: 0;
+    }
+    .classic__item:nth-child(2) { flex-direction: row-reverse; }
+    .classic__item .h4 {
+        font-size: 48px;
+        line-height: 63px;
+    }
+    .icon::before {
+        height: 48px;
+        width: 48px;
     }
 }
