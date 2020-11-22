@@ -210,6 +210,8 @@ a { color: #650300; text-decoration: none; }
     .mb-md-3 { margin-bottom: calc(var(--spacer) * 3); }
     .mb-md-5 { margin-bottom: calc(var(--spacer) * 5); }
     .mb-md-8 { margin-bottom: calc(var(--spacer) * 8); }
+    .mb-md-9 { margin-bottom: calc(var(--spacer) * 9); }
+    .mb-md-10 { margin-bottom: calc(var(--spacer) * 10); }
     .py-md-10 { padding-top: calc(var(--spacer) * 10); padding-bottom: calc(var(--spacer) * 10); }
     .pt-md-10 { padding-top: calc(var(--spacer) * 10); }
     .pb-md-16 { padding-bottom: calc(var(--spacer) * 16); }
